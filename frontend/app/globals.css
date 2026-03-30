@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfdff;
+  --foreground: #000000;
+  --font-inter: 'Century Gothic', 'Tw Cen MT', 'Futura', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  min-height: 100vh;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  background-color: var(--background);
+  /* Extremely subtle, transparent brand-purple rings for all light pages */
+  background-image: repeating-radial-gradient(
+    circle at 100% 0%,
+    transparent 0,
+    transparent 90px,
+    rgba(43, 9, 78, 0.06) 90px, 
+    rgba(43, 9, 78, 0.06) 92px
+  );
+  background-attachment: fixed;
+}
+
+/* Brand-matching Concentric Ring Aesthetic Class */
+.bg-concentric {
+  background-color: #120224 !important; /* Abyssal Deep Purple */
+  background-image: repeating-radial-gradient(
+    circle at 100% 0%,
+    transparent 0,
+    transparent 90px,
+    rgba(240, 190, 80, 0.15) 90px, /* Golden rings */
+    rgba(240, 190, 80, 0.15) 91.5px
+  ) !important;
+}
+
+/* Disable all rounding globally as requested */
+* {
+  border-radius: 0 !important;
+}
+
+/* Exception for vital circular interactive buttons */
+.force-round {
+  border-radius: 9999px !important;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-3xl border border-white/40 shadow-glass;
+}
+
+.glass-pill {
+  @apply bg-white/40 backdrop-blur-xl border border-white/60 rounded-full px-6 py-3;
+}
+
+.active-pill {
+  @apply bg-black text-white shadow-2xl;
+}
+
+.btn-primary {
+  @apply bg-black hover:bg-gray-900 text-white font-black py-4 px-10 rounded-[20px] transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl;
+}
+
+/* Custom Shadows and Overrides */
+@theme {
+  --color-black: #2B094E; /* Deep brand purple override */
+  --shadow-glass: 0 20px 50px rgba(0, 0, 0, 0.05);
+  --shadow-3xl: 0 35px 60px -15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Utilities */
+.nav-link {
+  @apply flex items-center px-6 py-4 text-[10px] font-black uppercase tracking-[0.2em] rounded-2xl transition-all duration-300;
+}
+
+.nav-item-active {
+  @apply bg-black text-white shadow-xl scale-105;
+}
+
+.nav-item-inactive {
+  @apply text-gray-400 hover:text-black hover:bg-white/50;
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
