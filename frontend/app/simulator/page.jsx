@@ -110,7 +110,8 @@ function SimulatorContent() {
         if (!session?.user?.id) return;
 
         // Connect Socket
-        const newSocket = io('http://127.0.0.1:4000');
+        const socketUrl = process.env.NEXT_PUBLIC_SOCKET_URL || 'http://127.0.0.1:4000';
+        const newSocket = io(socketUrl);
         setSocket(newSocket);
 
         newSocket.emit('join_room', {

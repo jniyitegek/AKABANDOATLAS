@@ -46,6 +46,7 @@ MONGODB_URI=your_mongodb_uri
 NEXTAUTH_URL=http://localhost:3001
 NEXTAUTH_SECRET=your_nextauth_secret
 MONGODB_URI=your_mongodb_uri
+NEXT_PUBLIC_SOCKET_URL=http://localhost:4000
 # Google OAuth (Optional)
 GOOGLE_CLIENT_ID=your_id
 GOOGLE_CLIENT_SECRET=your_secret
@@ -104,6 +105,31 @@ akabando-atlas/
     ├── models/         # Frontend-specific Schemas
     └── public/         # Static Assets
 ```
+---
+
+## Deployment (Cloud)
+
+This project is optimized for distributed deployment.
+
+### Backend (Railway)
+1. Link your `backend` folder to a new Railway project.
+2. Add a variable `MONGODB_URI` with your connection string.
+3. Railway will detect the `start` script and expose the port automatically.
+
+### Frontend (Vercel)
+1. Link your `frontend` folder to a new Vercel project.
+2. Add the following Environment Variables:
+   - `NEXTAUTH_URL`: Your production Vercel URL.
+   - `NEXTAUTH_SECRET`: A secure random string.
+   - `MONGODB_URI`: The same database URI used in the backend.
+   - `NEXT_PUBLIC_SOCKET_URL`: Your **Railway App URL** (e.g., `https://backend-production.up.railway.app`).
+
+---
+
+## Technical Architecture
+- **Frontend**: Next.js 16 (App Router) + Tailwind CSS 4.0.
+- **Backend**: Express.js + Socket.IO for real-time telemetry.
+- **Database**: MongoDB (Mongoose) shared across both layers.
 
 ---
 
