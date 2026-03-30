@@ -123,9 +123,9 @@ export default function LoginPage() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                    <button className="flex items-center justify-center py-4 px-4 bg-white/40 border border-white/60 rounded-2xl hover:bg-white/70 transition-all font-black text-[10px] text-gray-600 uppercase tracking-widest group shadow-sm disabled:opacity-70 cursor-not-allowed">
+                    {/* <button className="flex items-center justify-center py-4 px-4 bg-white/40 border border-white/60 rounded-2xl hover:bg-white/70 transition-all font-black text-[10px] text-gray-600 uppercase tracking-widest group shadow-sm disabled:opacity-70 cursor-not-allowed">
                         <Github className="h-4 w-4 mr-3 group-hover:scale-110 transition-transform text-black" /> Github
-                    </button>
+                    </button> */}
                     <button
                         onClick={handleGoogleSignIn}
                         disabled={loading || googleLoading}
@@ -136,7 +136,7 @@ export default function LoginPage() {
                         ) : (
                             <Chrome className="h-4 w-4 mr-3 group-hover:scale-110 transition-transform text-red-500" />
                         )}
-                         Google
+                        Google
                     </button>
                 </div>
 
