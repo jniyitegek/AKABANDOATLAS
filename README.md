@@ -1,10 +1,10 @@
-# 📖 Akabando Atlas Literacy Platform
+#  Akabando Atlas Literacy Platform
 
 Akabando Atlas is an interactive literacy platform designed to improve student reading fluency through real-time speech analysis, dynamic practice content, and professional reporting tools.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 Follow these steps to get the project running locally.
 
@@ -81,7 +81,7 @@ npm start
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Reading Simulator**: Real-time speech-to-text analysis with accuracy and fluency tracking.
 - **Report Cards**: Automated, professional PDF reports with granular mistake analysis.
@@ -91,7 +91,7 @@ npm start
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 akabando-atlas/
@@ -107,5 +107,5 @@ akabando-atlas/
 
 ---
 
-## 📝 License
-This project is for educational use within the Akabando School environment.
+## License
+This project is for educational use, all rights reserved by Jean Philippe Niyitegeka.
