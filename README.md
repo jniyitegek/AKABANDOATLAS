@@ -109,22 +109,8 @@ akabando-atlas/
 
 ## Deployment (Cloud)
 
-This project is optimized for distributed deployment.
+This project is optimized for distributed deployment, you can access it online, at akabandoatlas.vercel.app
 
-### Backend (Railway)
-1. Link your `backend` folder to a new Railway project.
-2. Add a variable `MONGODB_URI` with your connection string.
-3. Railway will detect the `start` script and expose the port automatically.
-
-### Frontend (Vercel)
-1. Link your `frontend` folder to a new Vercel project.
-2. Add the following Environment Variables:
-   - `NEXTAUTH_URL`: Your production Vercel URL.
-   - `NEXTAUTH_SECRET`: A secure random string.
-   - `MONGODB_URI`: The same database URI used in the backend.
-   - `NEXT_PUBLIC_SOCKET_URL`: Your **Railway App URL** (e.g., `https://backend-production.up.railway.app`).
-
----
 
 ## Technical Architecture
 - **Frontend**: Next.js 16 (App Router) + Tailwind CSS 4.0.
